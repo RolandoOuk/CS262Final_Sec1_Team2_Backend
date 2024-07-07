@@ -1,0 +1,41 @@
+.col{
+    background-color: white;
+   height: 600px;
+   border-radius: 30px;
+}
+
+::placeholder {
+    color: rgb(69, 69, 69);
+    opacity: 1; /* Firefox */
+  }
+  
+  ::-ms-input-placeholder { /* Edge 12 -18 */
+    color: red;
+  }
+
+input{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(206, 204, 204);
+    padding: 15px;
+}
+
+.button{
+  margin-top: 35px;
+}
+
+button{
+  color: white;
+  background-color: orange;
+  width: 150px;
+  height: 50px;
+  border: none;
+  
+}
+
+.sidebar{
+  background-color: rgb(137, 45, 45);
+  color: white;
+  
+}

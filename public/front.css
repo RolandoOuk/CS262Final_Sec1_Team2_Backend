@@ -1,0 +1,55 @@
+.sidebar{
+    background-color: rgb(137, 45, 45);
+    color: white;
+    
+}
+body {
+    flex-direction: column;
+    text-align: center;
+}
+
+.carousel-container {
+    width: 80%;
+    max-width: 1200px;
+}
+
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item {
+    min-width: 20%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.carousel-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}

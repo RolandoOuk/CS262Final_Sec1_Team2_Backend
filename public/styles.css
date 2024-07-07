@@ -1,0 +1,57 @@
+.sidebar{
+    background-color: rgb(137, 45, 45);
+    color: white;
+    
+}
+
+.name input{
+    height: 65px;
+    width: 45%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(206, 204, 204);
+    padding: 15px;
+    
+}
+
+
+button{
+    width: 130px;
+    height: 45px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+b{
+    color: rgb(255, 167, 3);
+}
+
+textarea{
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(206, 204, 204);
+    padding: 15px;
+    height: 130px;
+    width: 400px;
+}
+
+.expertise textarea{
+    height: 65px;
+    width: 45%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(206, 204, 204);
+    padding: 15px;
+}
+
+.name textarea{
+    height: 65px;
+    width: 45%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(206, 204, 204);
+    padding: 15px;
+}

@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #800000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.section {
+    margin-bottom: 20px;
+    color: limegreen;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.nav-button:hover {
+    background-color: #660000;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #800000;
+    color: limegreen;
+    padding: 10px 20px;
+}
+
+.user-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.user-table-container {
+    margin: 20px 0;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-table th,
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.user-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#addUser {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+#exportList {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+}
+
+.styled-link{
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    
+}
+
+aside {
+    grid-area: aside;
+    background-color: #800000;
+    padding: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+}

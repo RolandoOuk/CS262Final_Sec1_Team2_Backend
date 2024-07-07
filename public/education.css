@@ -1,0 +1,29 @@
+.sidebar{
+    background-color: rgb(137, 45, 45);
+    color: white;
+    
+}
+
+input{
+    height: 65px;
+    width: 43%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(206, 204, 204);
+    padding: 15px;
+    
+}
+
+.styled-link{
+    width: 150px;
+    height: 45px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 4%;
+    margin-left: 6%;
+    
+}

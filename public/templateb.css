@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'aside main'
+        'footer footer';
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #800000;
+    color: limegreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #800000;
+    padding: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-grid img {
+    width: calc(33% - 20px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    grid-area: footer;
+    background-color: #800000;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.styled-link{
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    
+}

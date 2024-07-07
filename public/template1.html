@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Sora:wght@100..800&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+    body {
+      font-family: "Lexend", sans-serif;
+    }
+
+    .profile-img {
+      width: 193px;
+      height: 193px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+      border: 4px solid rgb(255, 255, 255);
+      /* Add this line to add a border */
+    }
+
+    .section-title {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .sidebar {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      height: 100%;
+      width: auto;
+    }
+
+    .main-content {
+      background-color: #f8f9fa;
+      padding: 10px;
+      border-radius: 10px;
+      flex-grow: 1;
+    }
+
+    .reference-item {
+      margin-bottom: 10px;
+    }
+
+    .main-content h1 {
+      font-family: "Roboto Slab", serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .title-underline {
+      width: 100%;
+      height: 1px;
+      background-color: #343a40;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .title-underline-white {
+      width: 100%;
+      height: 1px;
+      background-color: #ffffff;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    h6 {
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .container-flex {
+      display: flex;
+      gap: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container mt-5">
+    <div class="row container-flex">
+      <div class="col-md-4 p-0">
+        <div class="sidebar">
+          <div class="text-center">
+            <img src="" alt="Richard Wilson" class="profile-img" />
+          </div>
+
+          <!-- contact -->
+          <div class="title-underline-white"></div>
+          <div class="contact-info mt-1">
+            <h5>CONTACT</h5>
+            <div class="title-underline-white"></div>
+            <p><i class="fa fa-phone"></i><span id="phoneNumber"></span></p>
+            <p><i class="fa fa-envelope"></i><span id="email"></span></p>
+            <p><i class="fa fa-map-marker"></i><span id="country"></span></p>
+          </div>
+
+          <!-- skills -->
+          <div class="education mt-4">
+            <div class="title-underline-white"></div>
+            <h5>Skills</h5>
+            <div class="title-underline-white"></div>
+            <p><strong>Your-Skills : </strong></p>
+            <div id="skillList">
+              <ul id="skills"></ul>
+            </div>
+          </div>
+
+
+          <!-- language -->
+          <div class="languages mt-4">
+            <div class="title-underline-white"></div>
+            <h5>LANGUAGE</h5>
+            <div class="title-underline-white"></div>
+            <div id="languageList">
+              <ul id="languages"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 p-0">
+        <div class="main-content mt-">
+          <!-- name -->
+          <div style="display: flex;">
+            <h1><span id="firstName"></span></h1>
+            <h1 style="padding-left: 10px;"><span id="lastName"></span></h1>
+          </div>
+          <h3>Marketing Manager</h3>
+          <div>
+            <!-- experience -->
+            <div class="title-underline"></div>
+            <h5 class="section-title">Work Experience</h5>
+            <div class="title-underline"></div>
+            <div>
+              <h6><span id="jobTitle"></span></h6>
+              <h6><span id="date"></span></h6>
+              <p><span id="dExperience"></span></p>
+            </div>
+
+            <!-- education -->
+            <div class="title-underline"></div>
+            <h5 class="section-title">Education</h5>
+            <div class="title-underline"></div>
+            <div>
+              <h6><span id="university"></span></h6>
+              <h6 style="font-size: 18px;"><span id="qualification"></span></h6>
+              <h6 style="font-size: 18px;"><span id="major"></span></h6>
+              <h6 style="font-size: 18px;"><span id="graduation"></span></h6>
+              <p><span id="dEducation"></span></p>
+            </div>
+
+            <!-- summary -->
+            <div class="title-underline"></div>
+            <h5 class="section-title">Summary</h5>
+            <div class="title-underline"></div>
+            <p><span id="summary"></span></p>
+          </div>
+
+          <!-- reference -->
+          <div>
+            <div class="title-underline"></div>
+            <h5 class="section-title">References</h5>
+            <div class="reference-item">
+              <div class="title-underline"></div>
+              <div id="referList">
+                <ul id="refer"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const data = JSON.parse(localStorage.getItem('formData'));
+
+      if (data) {
+        document.getElementById('email').textContent = data.email;
+        document.getElementById('country').textContent = data.country;
+        document.getElementById('phoneNumber').textContent = data.phoneNumber;
+        document.getElementById('firstName').textContent = data.firstName;
+        document.getElementById('lastName').textContent = data.lastName;
+        document.getElementById('jobTitle').textContent = data.jobTitle;
+        document.getElementById('date').textContent = data.date;
+        document.getElementById('dExperience').textContent = data.dExperience;
+        document.getElementById('university').textContent = data.university;
+        document.getElementById('qualification').textContent = data.qualification;
+        document.getElementById('major').textContent = data.major;
+        document.getElementById('graduation').textContent = data.graduation;
+        document.getElementById('dEducation').textContent = data.dEducation;
+        document.getElementById('summary').textContent = data.summary;
+      }
+
+      // Displaying skills
+      const skillList = JSON.parse(localStorage.getItem('skillList')) || [];
+      const skillUl = document.getElementById('skills');
+      skillList.forEach(skill => {
+        const li = document.createElement('li');
+        li.textContent = skill;
+        skillUl.appendChild(li);
+      });
+
+      // Displaying expertise
+      const expertiseList = JSON.parse(localStorage.getItem('expertiseList')) || [];
+      const expertiseUl = document.getElementById('expertise');
+      expertiseList.forEach(expertise => {
+        const li = document.createElement('li');
+        li.textContent = expertise;
+        expertiseUl.appendChild(li);
+      });
+
+      // Displaying languages
+      const languageList = JSON.parse(localStorage.getItem('languageList')) || [];
+      const languageUl = document.getElementById('languages');
+      languageList.forEach(language => {
+        const li = document.createElement('li');
+        li.textContent = language;
+        languageUl.appendChild(li);
+      });
+
+      // Displaying references
+      const referList = JSON.parse(localStorage.getItem('referList')) || [];
+      const referUl = document.getElementById('refer');
+      referList.forEach(refer => {
+        const li = document.createElement('li');
+        li.textContent = refer;
+        referUl.appendChild(li);
+      });
+    });
+  </script>
+</body>
+
+</html>

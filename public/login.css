@@ -1,0 +1,51 @@
+.left{
+    padding: 250px 0;
+    text-align: center;
+}
+.row{
+    height: 810px;
+}
+input{
+    width: 450px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(201, 201, 201);
+}
+button{
+    margin-top: 28px;
+    width: 180px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: rgb(157, 75, 75);
+
+}
+.right{
+    padding: 300px 0;
+    text-align: center;
+}
+body{
+    box-sizing: border-box;
+}
+::placeholder {
+    color: rgb(69, 69, 69);
+    opacity: 1; /* Firefox */
+  }
+
+  .sidebar{
+    background-color: rgb(137, 45, 45);
+    color: white;
+    
+}
+
+.styled-link{
+    width: 140px;
+    height: 35px;
+    text-decoration: none;
+    color: black;
+    border-radius: 30px;
+    padding: 5px;
+    
+}

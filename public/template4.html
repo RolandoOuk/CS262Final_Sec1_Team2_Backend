@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phillip Salazar - CV</title>
+    <link rel="stylesheet" href="tem4.css">
+    
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header" style="background-color: rgb(93, 92, 92); text-align: center; height: 180px;">
+            <div class="name">
+                <h1 style="color: white; font-family: 'Times New Roman', Times, serif; padding-top: 10px;"><span id="firstName"></span></h1>
+                <div class="contact-info">
+                    <p style="color: white;"><i class="fa-regular fa-envelope"></i><span id="email"></span></p>
+                    <p style="color: white;"><i class="fa-solid fa-phone"></i><span id="phoneNumber"></span></p>
+                    <p style="color: white;"><i class="fas fa-map-marker-alt"></i><span id="country"></span></p>
+                </div>
+            </div>
+        </div>
+        <section class="summary">
+            <h2>Summary Statement</h2>
+            <hr>
+            <p><span id="summary"></span></p>
+        </section>
+        <hr>
+        <section class="work-experience">
+            <h2>Work Experience</h2>
+            <hr>
+            <div class="job">
+                <h3><span id="jobTitle"></span></h3>
+                <p><span id="date"></span></p>
+                <p><span id="dExperience"></span></p>
+            </div>
+        </section>
+        <hr>
+        <section class="core-qualifications">
+            <h2>Core Qualifications</h2>
+            <hr>
+            <div id="qlist">
+                <ul id="qualification"></ul>
+            </div>
+        </section>
+        <hr>
+        <section class="education">
+            <h2>Education</h2>
+            <hr>
+            <div class="school">
+                <h3><span id="university"></span></h3>
+                <h3><span id="graduation"></span></h3>
+                <p><span id="dEducation"></span></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const data = JSON.parse(localStorage.getItem('formData'));
+
+            if (data) {
+                document.getElementById('email').textContent = data.email;
+                document.getElementById('country').textContent = data.country;
+                document.getElementById('phoneNumber').textContent = data.phoneNumber;
+                document.getElementById('firstName').textContent = data.firstName;
+                document.getElementById('jobTitle').textContent = data.jobTitle;
+                document.getElementById('date').textContent = data.date;
+                document.getElementById('dExperience').textContent = data.dExperience;
+                document.getElementById('university').textContent = data.university;
+                document.getElementById('graduation').textContent = data.graduation;
+                document.getElementById('dEducation').textContent = data.dEducation;
+                document.getElementById('summary').textContent = data.summary;
+            }
+
+            // Displaying qualifications
+            const qlist = JSON.parse(localStorage.getItem('qlist')) || [];
+            const qualificationUl = document.getElementById('qualification');
+            qlist.forEach(qualification => {
+                const li = document.createElement('li');
+                li.textContent = qualification;
+                qualificationUl.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>

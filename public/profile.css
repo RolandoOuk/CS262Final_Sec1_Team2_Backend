@@ -1,0 +1,31 @@
+.sidebar{
+    background-color: rgb(137, 45, 45);
+    color: white;
+    
+}
+
+
+.profile-info {
+    width: 55%;
+}
+
+.info-field {
+    margin-bottom: 15px;
+    text-align: left;
+    
+}
+
+.info-field label {
+    display: block;
+    color: #888;
+    margin-bottom: 5px;
+    
+}
+
+.info-field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #cecdcd;
+}

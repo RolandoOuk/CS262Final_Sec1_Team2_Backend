@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'aside main'
+        'footer footer';
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #800000;
+    color: limegreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #800000;
+    padding: 20px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.card.pink {
+    background-color: #ffe6e6;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #800000;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.styled-link{
+    width: 100px;
+    height: 30px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+canvas {
+    max-width: 600px;
+    margin: 20px auto;
+}
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard</h1>
+            <a href="user.html" class="styled-link"
+                            style="background-color: limegreen;">User</a>
+        </header>
+        <aside>
+            <ul class="menu">
+                <li>
+                    <a class="nav-link" href="dashboard.html" style="color: limegreen; text-decoration: none; font-size: 20px; font-weight: bold;">Dashboard</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="revenue.html" style="color: limegreen; text-decoration: none; font-size: 20px; font-weight: bold;">Revenue</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="templateb.html" style="color: limegreen; text-decoration: none; font-size: 20px; font-weight: bold;">Template</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="message.html" style="color: limegreen; text-decoration: none; font-size: 20px; font-weight: bold;">Message</a>
+                </li>
+            </ul>
+        </aside>
+        <main>
+            <div class="cards">
+                <div class="card pink">
+                    <span>Download</span>
+                    <h2>168900</h2>
+                </div>
+                <div class="card">
+                    <span>Template</span>
+                    <h2>168</h2>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Dashboard</h1>
+                <canvas id="myChart"></canvas>
+            </div>
+        </main>
+        <footer>
+            <span>SMOS</span>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Downloads',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
+
+    </script>
+    
+</body>
+</html>
